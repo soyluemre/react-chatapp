@@ -361,12 +361,3 @@ function App() {
 }
 
 export default App;
-
-// const firebaseConfig = {
-//   apiKey: "AIzaSyD6dPltYz258BZ3TpMOREORS9SdODweJI8",
-//   authDomain: "chatapp-d43fb.firebaseapp.com",
-//   projectId: "chatapp-d43fb",
-//   storageBucket: "chatapp-d43fb.appspot.com",
-//   messagingSenderId: "411234178651",
-//   appId: "1:411234178651:web:28944e23db57926b09917e",
-// };
