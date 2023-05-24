@@ -1,0 +1,453 @@
+.App {
+  text-align: center;
+}
+
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.room-list {
+  border: 1px solid #4062ab;
+  width: 200px;
+  height: 265.26px;
+  padding: 0 3rem;
+  border-radius: 5px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  position: relative;
+}
+
+.room-list ul {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.room-list ul li {
+  width: 90% !important;
+  word-wrap: break-word;
+}
+
+.room-list ul li:nth-child(1) {
+  width: 100% !important;
+  letter-spacing: 2px;
+}
+
+.room-list-title {
+  position: sticky;
+  top: 0%;
+  left: 0;
+  right: 0;
+  background-color: #333;
+  font-size: 1.25rem;
+  color: #4062ab;
+  margin-top: -0.7rem;
+  padding: 0;
+  font-weight: 500;
+}
+
+/*! sayfa üzerindeki scroll işareti !*/
+.room-list::-webkit-scrollbar {
+  width: 3px;
+  height: 2px;
+}
+
+/*! asagi kayan scroll isareti!*/
+.room-list::-webkit-scrollbar-thumb {
+  background-color: #6a8fde;
+  border-radius: 10px;
+}
+
+/*! Scroll işareti kolu fare üzerine !*/
+.room-list::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 68, 0, 0.811);
+  background-color: silver;
+}
+
+.room-list ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.room-list ul li span {
+  text-decoration: none;
+  color: bisque;
+  cursor: pointer;
+  border: 1px solid #4062ab;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding: 0.5rem;
+  display: inline-block;
+  width: 100%;
+  margin: auto;
+  font-weight: bold;
+}
+
+.room-list ul li span:hover {
+  color: bisque;
+  background-color: #4062ab;
+  transition: all 0.4s;
+}
+
+.room-list ul li {
+  padding: 0.5rem;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: fixed;
+  left: 50%;
+  border-radius: 10px;
+  padding: 1.5rem;
+  width: 230px;
+  background-color: #333;
+  color: bisque;
+  z-index: 2;
+  box-shadow: 3px 3px 500px #4062ab;
+  transition: top 0.5s, transform 0.5s;
+}
+
+.close-button {
+  position: fixed;
+  top: -6%;
+  right: 4%;
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: bisque;
+  opacity: 0.8;
+}
+
+.close-button:hover {
+  color: #6a8fde;
+  transition: all 0.3s;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  cursor: default; /* İpucu: Bu satırı ekleyerek overlay'e tıklanmasını engelleyebilirsiniz */
+}
+
+.modal-content {
+  text-align: center;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.modal-content h6 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.modal-content input {
+  margin: 2rem auto 0.5rem auto;
+  padding: 0.5rem;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  font-size: 1.1rem;
+}
+
+.input-div {
+  position: relative;
+}
+
+.hide-password,
+.show-password {
+  position: absolute;
+  top: 45%;
+  right: 0%;
+  border-radius: 10px;
+  color: #4062ab;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 0.5rem;
+  min-width: 20px;
+}
+
+.hide-password:hover {
+  color: #6a8fde;
+}
+
+.modal-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between !important;
+}
+
+.modal-buttons button {
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+  background: #3b5998;
+  color: bisque;
+  padding: 0.6rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.modal-buttons button:hover {
+  transition: all 0.4s;
+  background: #4062ab;
+}
+
+.logout-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: fixed;
+  left: 50%;
+  border-radius: 10px;
+  padding: 1.5rem;
+  width: 240px;
+  background-color: #333;
+  color: bisque;
+  z-index: 2;
+  box-shadow: 3px 3px 500px #4062ab;
+  transition: top 0.5s, transform 0.5s;
+}
+
+.logout-modal-content {
+  text-align: center;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.logout-modal-content h6 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.logout-modal-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 0.5rem;
+}
+
+.logout-modal-buttons button {
+  border-radius: 10px;
+  border: none;
+  background: #3b5998;
+  color: bisque;
+  padding: 0.6rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.logout-modal-buttons button:hover {
+  transition: all 0.4s;
+  background: #4062ab;
+}
+
+.room-flex {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between !important;
+  flex-direction: column;
+}
+
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem auto;
+  gap: 0.5rem;
+  padding: 0.4rem;
+}
+
+.nav-user,
+.sign-out {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.nav-user img {
+  width: 40px;
+  border-radius: 30px;
+  border: 1px solid bisque;
+}
+
+.sign-out button {
+  border: none;
+  font-weight: bold;
+  border-radius: 30px;
+  padding: 0.8rem;
+  width: 40px;
+  cursor: pointer;
+  background: #3b5998;
+}
+
+.sign-out button i {
+  color: bisque;
+}
+
+.sign-out button:hover {
+  background: #4062ab;
+  transition: all 0.4s;
+}
+
+.nav-buttons h6,
+.sign-out span {
+  font-size: 0.7rem;
+  margin: 0.2rem;
+  text-align: center;
+  color: bisque;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.auth {
+  text-transform: uppercase;
+  margin: auto;
+  color: #fff;
+  height: 99vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.auth p {
+  color: bisque;
+}
+
+.auth button {
+  padding: 0.7rem;
+  border-radius: 10px;
+  background: #3b5998;
+  color: bisque;
+  border: none;
+  cursor: pointer;
+}
+
+.auth button:hover {
+  background: #4062ab;
+}
+
+.chat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.room {
+  border: 1px solid #4062ab;
+  border-radius: 5px;
+  padding: 3rem;
+  background-color: #3333338d;
+  width: 200px;
+  margin: 4rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.room h6 {
+  font-size: 1.3rem;
+  display: block;
+  margin-top: -1rem;
+  letter-spacing: 2px;
+  font-weight: 500;
+  color: #4062ab;
+  text-align: center;
+}
+
+.room input {
+  font-size: 1.2rem;
+  margin: auto;
+  padding: 0.7rem;
+  outline: none;
+  border-radius: 10px;
+  border: 1px solid #4062ab;
+}
+
+.room input:focus {
+  border: 1px solid black;
+  transition: all 0.4s;
+}
+
+.room button {
+  width: 100%;
+  padding: 0.7rem;
+  margin-top: 1rem;
+  color: bisque;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  background: #3b5998;
+  border: 1px solid #4062ab;
+}
+
+.room button:hover {
+  background: #4062ab;
+  transition: all 0.4s;
+}
+
+.loading-gif {
+  width: 50px;
+  margin: 1rem auto;
+}
+
+.loading-page {
+  width: 50px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+@media (max-width: 614px) {
+  .chat {
+    margin-top: -5rem !important;
+  }
+
+  .home {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .room {
+    margin: 0;
+  }
+
+  .room-list {
+    height: 165.26px;
+  }
+}
